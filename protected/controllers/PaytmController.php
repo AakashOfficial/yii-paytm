@@ -27,8 +27,7 @@ class PaytmController extends Controller {
     }
 
     /**
-     * Paytm
-     * @throws CHttpException
+     * Paytm resonse handler
      */
     public function actionResponse() {
         //validation
