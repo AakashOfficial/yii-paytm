@@ -156,9 +156,9 @@ class Paytm extends CComponent {
     }
 
     public function initiateTxnRefund($requestParamList) {
-        $CHECKSUM = $this->getchecksumFromArray($requestParamList, 0);
+        $CHECKSUM = $this->getchecksumFromArray($requestParamList);
         $requestParamList["CHECKSUM"] = $CHECKSUM;
-        return callAPI($this->refund_url, $requestParamList);
+        return $this->callAPI($this->refund_url, $requestParamList);
     }
 
     public function callAPI($apiURL, $requestParamList) {
