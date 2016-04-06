@@ -16,7 +16,7 @@ class Paytm extends CComponent {
         $domain = 'pguat.paytm.com';
 
         if ($this->api_live == true) {
-            $domain = 'secure.paytm.com';
+            $domain = 'secure.paytm.in';
         }
 
         $this->refund_url = 'https://' . $domain . '/oltp/HANDLER_INTERNAL/REFUND';
