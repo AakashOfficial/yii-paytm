@@ -151,7 +151,11 @@ class Paytm extends CComponent {
         return $arrayList;
     }
 
-    public function getTxnStatus($requestParamList) {
+    public function getTxnStatus($order_id) {
+        $requestParamList = [];
+        $requestParamList['MID'] = $this->merchant_id;
+        $requestParamList['ORDERID'] = $order_id;
+
         return $this->callAPI($this->status_query_url, $requestParamList);
     }
 
